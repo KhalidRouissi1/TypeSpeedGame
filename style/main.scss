@@ -1,0 +1,275 @@
+@use './helping/colors' as *;
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open sans',sans-serif;
+}
+
+.game {
+    background-color: #eee;
+    min-height: 100vh;
+}
+.container {
+    margin: auto;
+    max-width: 900px;
+}
+
+.name{ 
+    background-color: $mainColor;
+    color:white;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+.message{
+    background-color: white;
+        padding: 15px;
+        margin: 15px  0 ;
+        border-radius: 6px;
+        text-align: center;
+
+    span{
+        font-weight: bold;
+        color: $secondeColor;
+        &::before{
+            content: '[ ';
+
+            }
+        &::after{
+            content: ' ]';
+            
+        }
+    }
+}
+
+
+
+.start {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: $secondeColor;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.3s;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+
+.the-word{
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    color: $mainColor;
+    user-select: none;
+}
+
+.input{
+    margin: 15px auto;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    border: 3px solid  $mainColor;
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    
+    border-radius: 6px;
+    caret-color: $mainColor;
+    &:focus{
+        outline: none;
+    }
+}
+
+.upcoming-words{
+
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    div{
+        background-color: $mainColor;
+        color: white;
+        font-weight: bold;
+        margin: 4px;
+        padding: 10px;
+        border-radius: 6px;
+        text-transform: capitalize;
+    }
+}
+
+.control{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+
+    span{
+        font-weight: bold;
+        color: $secondeColor;
+    }
+}
+
+
+.finish{
+    font-weight: bold;
+    font-size:30px;
+    text-align: center;
+    padding: 20px;
+      .good{
+        color: $mainColor;
+    }
+     .bad{
+        color: red;
+    }
+}
+
+
+
+
+.w-parghraphe{
+    padding: 50px;
+    text-align: center;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .w-email{
+        border-radius: 50px;
+        border: 1px solid $mainColor;
+        padding: 5px;
+
+        &:focus{
+            outline: none;
+            caret-color: $mainColor;
+        }
+    }
+    .w-name{
+        border-radius: 50px;
+        border: 1px solid $mainColor;
+        padding: 5px;
+
+        &:focus{
+            outline: none;
+            caret-color: $mainColor;
+        }
+    }
+
+
+    select{
+        border: 1px solid $mainColor;
+        border-radius: 50px;
+        padding: 5px;
+        color:rgb(0, 156, 177);
+        &:focus{
+            outline-color: $mainColor;
+            
+        }
+    }
+    .btn{
+        // font-size: 20px;
+        // font-weight: bold;
+        text-align: center;
+        background-color: $secondeColor;
+        border-color:$secondeColor;
+        color: white;
+        padding: 5px 40px;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: 0.3s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+}
+
+.popOver{
+    display: hidden;
+    position: absolute;
+    border-radius: 50px;
+    top: 20%;
+    left: 25%;
+    background-color: $secondeColor;
+    width: 650px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    h5{
+
+        font-size: 50px;
+        color: white;
+    }
+    button{
+        border: 1px $mainColor solid;
+        border-radius: 50px;
+        padding: 20px 40px;
+        background-color: $mainColor;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+}
+
+
+.popWin{
+    position: absolute;
+    border-radius: 50px;
+    top: 20%;
+    left: 25%;
+    background-color: $secondeColor;
+    width: 650px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    h5{
+
+        font-size: 50px;
+        color: white;
+    }
+    button{
+        border: 1px $mainColor solid;
+        border-radius: 50px;
+        padding: 20px 40px;
+        background-color: $mainColor;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
+
+.w-btn{
+    border: none;
+    color: rgb(0, 156, 177);
+    background-color: white;
+    border: rgb(0, 156, 177) 1px solid;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}

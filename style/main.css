@@ -1,0 +1,284 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+}
+
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+
+.name {
+  background-color: #2196f3;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.message {
+  background-color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.message span {
+  font-weight: bold;
+  color: #009688;
+}
+.message span::before {
+  content: "[ ";
+}
+.message span::after {
+  content: " ]";
+}
+
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #009688;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  opacity: 0.9;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.start:hover {
+  opacity: 1;
+}
+
+.the-word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  color: #2196f3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.input {
+  margin: 15px auto;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 3px solid #2196f3;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  caret-color: #2196f3;
+}
+.input:focus {
+  outline: none;
+}
+
+.upcoming-words {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.upcoming-words div {
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+  margin: 4px;
+  padding: 10px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+}
+.control span {
+  font-weight: bold;
+  color: #009688;
+}
+
+.finish {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+.finish .good {
+  color: #2196f3;
+}
+.finish .bad {
+  color: red;
+}
+
+.w-parghraphe {
+  padding: 50px;
+  text-align: center;
+}
+
+.formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.formContainer .w-email {
+  border-radius: 50px;
+  border: 1px solid #2196f3;
+  padding: 5px;
+}
+.formContainer .w-email:focus {
+  outline: none;
+  caret-color: #2196f3;
+}
+.formContainer .w-name {
+  border-radius: 50px;
+  border: 1px solid #2196f3;
+  padding: 5px;
+}
+.formContainer .w-name:focus {
+  outline: none;
+  caret-color: #2196f3;
+}
+.formContainer select {
+  border: 1px solid #2196f3;
+  border-radius: 50px;
+  padding: 5px;
+  color: rgb(0, 156, 177);
+}
+.formContainer select:focus {
+  outline-color: #2196f3;
+}
+.formContainer .btn {
+  text-align: center;
+  background-color: #009688;
+  border-color: #009688;
+  color: white;
+  padding: 5px 40px;
+  cursor: pointer;
+  opacity: 0.9;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.formContainer .btn:hover {
+  opacity: 1;
+}
+
+.popOver {
+  display: hidden;
+  position: absolute;
+  border-radius: 50px;
+  top: 20%;
+  left: 25%;
+  background-color: #009688;
+  width: 650px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+.popOver h5 {
+  font-size: 50px;
+  color: white;
+}
+.popOver button {
+  border: 1px #2196f3 solid;
+  border-radius: 50px;
+  padding: 20px 40px;
+  background-color: #2196f3;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.popWin {
+  position: absolute;
+  border-radius: 50px;
+  top: 20%;
+  left: 25%;
+  background-color: #009688;
+  width: 650px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+.popWin h5 {
+  font-size: 50px;
+  color: white;
+}
+.popWin button {
+  border: 1px #2196f3 solid;
+  border-radius: 50px;
+  padding: 20px 40px;
+  background-color: #2196f3;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.w-btn {
+  border: none;
+  color: rgb(0, 156, 177);
+  background-color: white;
+  border: rgb(0, 156, 177) 1px solid;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}

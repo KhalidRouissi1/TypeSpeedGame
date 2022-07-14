@@ -1,2 +1,2 @@
 # TypeSpeedGame
-A Type Speed Game
+A game to try your keyboard typing speed
